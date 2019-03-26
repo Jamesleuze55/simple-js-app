@@ -32,5 +32,5 @@ for (var a = 0; a<repository.length; a++) {
    h = " That's Big!!";
  }
 
- document.write('<div>' + repository[a].name + '(height: ' +                     repository[a].height +') ' + h +' </div>');
+ document.write('<div>' + repository[a].name + '(height: ' + repository[a].height +') ' + h +' </div>');
 }
