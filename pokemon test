@@ -1,0 +1,63 @@
+var pokemonRepository = (function() {
+  var repository = [
+    {name: 'Weedle', height: 3, types: ['bugs', 'poision']},
+    {name: 'Bulbasaur', height: 7, types: ['grass', 'poision']},
+    {name: 'Gigalith', height: 17, types: ['rock']},
+  ];
+
+  // console.log('Im held hostage inside of pokemonRepository', repository);
+
+  function getAll() {
+    return repository
+  }
+
+  function add(item){
+    return repository.push(item)
+  }
+
+  return {
+    add: add,
+    getAll: getAll // <- this here allows us to do just that, access private data
+  };
+
+})();
+
+// pokemonRepository.getAll(); // this returns us the array of repository
+// you can check:
+
+// you can check what it returns here, this is your best friend, the console.log, seriously..
+// console.log('What is in my pokemonRepository function?', pokemonRepository);
+
+//This -> pokemonRepository.getAll() is the same as calling for console.log(repository); from above, however because we are outside of the function pokemonRepository, we can not reach the "private" data that's held inside, which is the repository of pokemon.
+
+// Why are we using pokemonRepository.getAll()? because we need access to that data
+
+pokemonRepository.getAll().forEach(function(pokemon){
+  // console.log(pokemon.name);
+
+  // document.write('<h1>Pokemon</h1>');
+  var h ='';
+
+  if (pokemon.height > 16.9) {
+    h = "-Wow That's Big!!";
+  }
+
+  // document.write('<div>' + repository[a].name + '(height: ' + repository[a].height +') ' + h +' </div>');
+  console.log('Name: ' + pokemon.name + 'height: ' + pokemon.height + h);
+});
+
+
+// to add a pokemon
+// this new object should match our other pokemon object.
+var Willosaurous = {
+  name: 'Willosaurous',
+  height: 20,
+  types: ['pizza', 'beer', 'Chips']
+};
+// looks cleaner and clearer when you indent and add line breaks
+
+pokemonRepository.add(Willosaurous); // add Willo to the repo of other pokemons
+console.log('final count of my pokemons: ', pokemonRepository.getAll());
+
+
+// and there we have it
