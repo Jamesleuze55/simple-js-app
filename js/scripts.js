@@ -20,7 +20,6 @@ var pokemonRepository = (function() {
 
 })();
 
-
 pokemonRepository.getAll().forEach(function(pokemon){
   var h ='';
 
