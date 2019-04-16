@@ -22,3 +22,8 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+.pokemon-list {
+  padding-top: 20px;
+  text-align: right;
+}
