@@ -22,6 +22,6 @@
 }
 
 .pokemon-list {
-  text-align: inherit;
-
+  text-align: rigth;
+  padding-left: 50px;
 }
