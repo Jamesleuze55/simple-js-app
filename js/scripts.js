@@ -23,7 +23,7 @@ var pokemonRepository = (function() {
 pokemonRepository.getAll().forEach(function(pokemon){
   var h ='';
 
-document.write('<h1>Pokemon</h1>');
+//document.write('<h1>Pokemon</h1>');
 var h ='';
 for (var a = 0; a<repository.length; a++) {
   if (repository[a].height > 16.9) {
