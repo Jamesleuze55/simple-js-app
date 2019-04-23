@@ -12,59 +12,56 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #f40004;
+  cursor: url("../images/pokeball-cursor.png"), auto;
 }
 
 .background-image {
   height: 100%;
   width: 100%;
-  background: url("../images/pokemon-go-13-2.jpg");
+  background: url("../images/pokemon-hd.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  position: fixed;
   overflow-y: scroll;
   overflow-x: scroll;
-}
+  }
 
-
+hr {
+  max-width: 500px;
+  }
 
 .page-header {
   font-size: 45px;
   text-align: center;
-  padding-left: 125px;
+  padding-left: 38px;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
   }
 
+
   #searchInput{
-    width: 238px;
+    width: 240px;
     height: 40px;
     border: 2px solid #f40004;
     background-color: transparent;
     color: black;
-    margin-left: 815px;
+    margin-left: 765px;
   }
 
-#pokemon-list {
-  text-align: center;
-  padding-left: 125px;
-  padding-top: 12px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  font-size: 30px;
-  list-style-type: none;
-}
-
-.pokemon_name {
-  width: 15%;
-  padding: 1px 1px 1px 1px;
-  margin: 10px 0px 10px 690px;
-  background-color: white;
-  border-radius: 5px 5px 5px 5px;
-  text-align: left;
-
-}
+  #pokemon-list {
+    text-align: center;
+    padding-top: 12px;
+    font-size: 35px;
+    list-style-type: none;
+  }
 
 .pokemon_name--button {
-  cursor: url("../images/pokeball-cursor.png"), auto;
+  width: 15%;
+  padding: 1px 1px 1px 1px;
+  margin: 10px 0px 0px 0px;
+  background-color: transparent;
+  border-radius: 5px 5px 5px 5px;
+  color: #f40004;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
