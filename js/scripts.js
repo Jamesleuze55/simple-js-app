@@ -36,3 +36,14 @@ for (var a = 0; a<repository.length; a++) {
 var listItems = document.querySelector('ul').getElementsByClassName(pokemon_name);
 
 console.log(listitems);
+
+
+
+//Adding pokemon
+function addListItem (weedle) {
+  console.log(weedle);
+}
+
+var weedle={name: 'Weedle', height: 3, types: ['bugs', 'poision']};
+
+addListItem(weedle);
