@@ -82,7 +82,6 @@ hr {
 	text-shadow:0px 1px 0px #810e05;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  transition: all 0.3s ease 0s;
 }
 .pokemon_name:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
