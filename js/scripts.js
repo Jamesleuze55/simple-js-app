@@ -57,14 +57,50 @@ for (var a = 0; a<pokemonRepository.length; a++) {
 
 
 //Adding pokemon
-function addListItem (jim) {
-  console.log(jim);
+function addListItem (pokemon) {
+  console.log(pokemon);
 }
 
 var weedle={name: 'Weedle', height: 3, types: ['bugs', 'poision']};
 var bulbasaur={name: 'Bulbasaur', height: 7, types: ['grass', 'poision']};
+var gigaLith={name: 'Gigalith', height: 1.7, types: ['rock']};
+var beedrill={name: 'Beedrill' , height: 1, types: ['bug', 'poison']};
+var persian={name: 'Persian' , height: 1, types: ['normal']};
+var machamp={name: 'Machamp', height: 1.6, types: ['fighting']};
+var seaking={name: 'Seaking', height: 1.3, types: ['water']};
+var moltres={name: 'Moltres', height: 2.0, types: ['fire', 'flying']};
+var magcargo={name: 'Magcargo', height: 0.8 , types:['fire', 'rock']};
+var entei={name: 'Entei', height: 2.1, types:['fire']};
+var torkoal={name: 'Torkoal', height: 0.5, types:['fire']};
+var crawdaunt={name: 'Crawdaunt', height: 1.1, types:['dark', 'water']};
+var metagross={name: 'Metagross', height: 1.6, types:['psychic', 'steel']};
+var latios={name: 'Latios', height: 2.0, types:['psychic', 'dragon']};
+var giratina={name: 'Giratina', height: 4.5, types:['dragon', 'ghost']};
+var emboar={name: 'Emboar', height: 1.6, types:['fire', 'fighting']};
+var herdier={name: 'Herdier', height: 0.9, types:['normal']};
+var krokorok={name: 'Krokorok', height: 1, types:['dark', 'ground']};
+var carracosta={name: 'Carracosta', height: 1.2, types:['water', 'rock']};
+var wobuffet={name: 'Wobuffet', height: 1.3, types:['psychic']};
 addListItem(weedle);
 addListItem(bulbasaur);
+addListItem(gigalith);
+addListItem(beedrill)
+addListItem(persian);
+addListItem(machamp);
+addListItem(seaking);
+addListItem(moltres);
+addListItem(magcargo);
+addListItem(entei);
+addListItem(torkoal);
+addListItem(crawdaunt);
+addListItem(metagross);
+addListItem(latios);
+addListItem(girtina);
+addListItem(emboar);
+addListItem(herdier);
+addListItem(krokorok);
+addListItem(carracosta);
+addListItem(wobuffet);
 
 /*function addingNumbers (jim, al, bill, joe) {
   var total=(jim+al+bill+joe);
