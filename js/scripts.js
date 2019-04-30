@@ -19,7 +19,7 @@ var pokemonRepository = (function() {
     {name: 'Herdier', height: 0.9, types:['normal']},
     {name: 'Krokorok', height: 1, types:['dark', 'ground']},
     {name: 'Carracosta', height: 1.2, types:['water', 'rock']},
-    {name: 'Wobuffet', height: 1.3, types:['psychic']},
+    {name: 'Wobbuffet', height: 1.3, types:['psychic']},
   ];
 
   function getAll() {
@@ -80,7 +80,7 @@ var emboar={name: 'Emboar', height: 1.6, types:['fire', 'fighting']};
 var herdier={name: 'Herdier', height: 0.9, types:['normal']};
 var krokorok={name: 'Krokorok', height: 1, types:['dark', 'ground']};
 var carracosta={name: 'Carracosta', height: 1.2, types:['water', 'rock']};
-var wobuffet={name: 'Wobuffet', height: 1.3, types:['psychic']};
+var wobbuffet={name: 'Wobuffet', height: 1.3, types:['psychic']};
 addListItem(weedle);
 addListItem(bulbasaur);
 addListItem(gigalith);
@@ -100,7 +100,7 @@ addListItem(emboar);
 addListItem(herdier);
 addListItem(krokorok);
 addListItem(carracosta);
-addListItem(wobuffet);
+addListItem(wobbuffet);
 
 /*function addingNumbers (jim, al, bill, joe) {
   var total=(jim+al+bill+joe);
