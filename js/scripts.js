@@ -63,7 +63,7 @@ function addListItem (pokemon) {
 
 var weedle={name: 'Weedle', height: 3, types: ['bugs', 'poision']};
 var bulbasaur={name: 'Bulbasaur', height: 7, types: ['grass', 'poision']};
-var gigaLith={name: 'Gigalith', height: 1.7, types: ['rock']};
+var gigalith={name: 'Gigalith', height: 1.7, types: ['rock']};
 var beedrill={name: 'Beedrill' , height: 1, types: ['bug', 'poison']};
 var persian={name: 'Persian' , height: 1, types: ['normal']};
 var machamp={name: 'Machamp', height: 1.6, types: ['fighting']};
@@ -95,7 +95,7 @@ addListItem(torkoal);
 addListItem(crawdaunt);
 addListItem(metagross);
 addListItem(latios);
-addListItem(girtina);
+addListItem(giratina);
 addListItem(emboar);
 addListItem(herdier);
 addListItem(krokorok);
