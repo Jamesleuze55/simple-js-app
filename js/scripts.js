@@ -84,7 +84,7 @@ var wobuffet={name: 'Wobuffet', height: 1.3, types:['psychic']};
 addListItem(weedle);
 addListItem(bulbasaur);
 addListItem(gigalith);
-addListItem(beedrill)
+addListItem(beedrill);
 addListItem(persian);
 addListItem(machamp);
 addListItem(seaking);
