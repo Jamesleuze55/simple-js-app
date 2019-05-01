@@ -1,5 +1,3 @@
-
-//IIFE wrap-:please wrap all within interval
 var pokemonRepository = (function() {
   var repository = [
     {name: 'Weedle', height: 0.3, types: ['bugs', 'poision']},
@@ -39,10 +37,8 @@ var pokemonRepository = (function() {
 
 })();
 
-pokemonRepository.forEach(function(pokemon){
-  pokemonRepository.addListItem(pokemon);
-});
-/*var h ='';
+/*pokemonRepository.getAll().forEach(function(pokemon){
+var h ='';
 
 document.write('<h1>Pokemon</h1>');
 var h ='';
@@ -52,14 +48,12 @@ for (var a = 0; a<pokemonRepository.length; a++) {
   }
 }
   console.log('Name: ' + pokemon.name + 'height: ' + pokemon.height + h);
-});
+});*/
 
 //Adding pokemon
-function addListItem (pokemon) {
-  console.log(pokemon);
-}
 
-var weedle={name: 'Weedle', height: 3, types: ['bugs', 'poision']};
+
+/*var weedle={name: 'Weedle', height: 3, types: ['bugs', 'poision']};
 var bulbasaur={name: 'Bulbasaur', height: 7, types: ['grass', 'poision']};
 var gigalith={name: 'Gigalith', height: 1.7, types: ['rock']};
 var beedrill={name: 'Beedrill' , height: 1, types: ['bug', 'poison']};
@@ -98,14 +92,4 @@ addListItem(emboar);
 addListItem(herdier);
 addListItem(krokorok);
 addListItem(carracosta);
-addListItem(wobbuffet);
-
-
-
-/*function addingNumbers (jim, al, bill, joe) {
-  var total=(jim+al+bill+joe);
-  console.log(total)
-}
-
-addingNumbers(3, 2, 1, 0);
-addingNumbers(4, 3, 2, 1);*/
+addListItem(wobbuffet);*/
