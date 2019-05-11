@@ -40,13 +40,13 @@ hr {
 
 
   #searchInput{
-    width: 244px;
+    width: 225px;
     height: 41px;
     border: 2px solid #f40004;
     border-radius: 15px;
     background-color: transparent;
     color: #f40004;
-    margin-left: 765px;
+    margin-left: 710px;
   }
 
   #pokemon-list {
