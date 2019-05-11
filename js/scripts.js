@@ -25,23 +25,67 @@ var pokemonRepository = (function() {
   ];
 
   function getAll() {
-    return repository
+    return repository;
   }
 
-  function add(item){
-    return repository.push(item)
+  function add(pokemon){
+    return repository.push(pokemon);
   }
 
   return {
     add: add,
-    getAll: getAll // <- this here allows us to do just that, access private data
+    getAll: getAll
+   // <- this here allows us to do just that, access private data
   };
 
 })();
 
-pokemonRepository.forEach(function(pokemon){
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.getAll().forEach(function(pokemon){   //The pokemonRepository points to the var=pokemonRepository at the top of code
+  addListItem(pokemon);                                  //getAll is a function and grabs all the pokemon in the pokemonRepository and give back as an array; forEach is another function that is run on the array and  it requires us to pass in a function, the function then needs to excpt an item from the array and then do something with it.
 });
+
+
+//Adding pokemon
+function addListItem (pokemon) {              //This is the function
+  var listItem = document.createElement("li");  //This creates the li element
+  var button = document.createElement("button"); //This creates the button
+  button.classList.add("pokemon_name");         //This will mimic style as the others button by assigning the class for the button styling
+  document.querySelector("#pokemon-list").appendChild(listItem); // querySelector looks for the id/class and then attaches the li(child) that was done on line 49 to the list
+  button.innerText=pokemon.name;          //This adds the text "button" to the page
+  listItem.appendChild(button);       //This adds the button element to the li(child) which was added on line52 to ther page
+  button.addEventListener ('click', function (){  //This is adding eventlistener to the button.  So when the button is clicked the function () then refers to the next step which showDetails(pokemon) below.shows the details of the pokemon clicked in the console.  The pokemon is being pulled in from the arrugement of the original function "function addListItem (pokemon)" above
+    showDetails(pokemon);       // This then looks for the showDetails function.  Since the function it looking for is not located on a local level within the addListItem function, it then looks to the global scope and find the function "function showDetails (pokemon) { console.log(pokemon) }" and then runs the console.log and with register to the console the pokemon info for the pokemon button clicked.
+  });
+}
+
+
+function showDetails (pokemon) {
+  console.log(pokemon);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*var h ='';
 
 document.write('<h1>Pokemon</h1>');
@@ -54,10 +98,7 @@ for (var a = 0; a<pokemonRepository.length; a++) {
   console.log('Name: ' + pokemon.name + 'height: ' + pokemon.height + h);
 });
 
-//Adding pokemon
-function addListItem (pokemon) {
-  console.log(pokemon);
-}
+
 
 var weedle={name: 'Weedle', height: 3, types: ['bugs', 'poision']};
 var bulbasaur={name: 'Bulbasaur', height: 7, types: ['grass', 'poision']};
