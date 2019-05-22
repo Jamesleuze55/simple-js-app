@@ -1,8 +1,8 @@
 
 //IIFE wrap-:please wrap all within interval
 var pokemonRepository = (function() {
-  var repository = [
-    {name: 'Weedle', height: 0.3, types: ['bugs', 'poision']},
+  var repository = [];
+  /*{name: 'Weedle', height: 0.3, types: ['bugs', 'poision']},
     {name: 'Bulbasaur', height: 0.7, types: ['grass', 'poision']},
     {name: 'Gigalith', height: 1.7, types: ['rock']},
     {name: 'Beedrill' , height: 1 , types: ['bug', 'poison']},
@@ -21,8 +21,39 @@ var pokemonRepository = (function() {
     {name: 'Herdier', height: 0.9, types:['normal']},
     {name: 'Krokorok', height: 1, types:['dark', 'ground']},
     {name: 'Carracosta', height: 1.2, types:['water', 'rock']},
-    {name: 'Wobbuffet', height: 1.3, types:['psychic']},
-  ];
+    {name: 'Wobbuffet', height: 1.3, types:['psychic']},*/
+
+    function loadList(){
+      return fetch(apiUrl).then(function (response) {
+        return response.json();
+      }).then(function(json){
+        json.results.forEach(function (item){
+          var pokemon = {
+            name: item.name,
+            detailsUrl: item.url
+          };
+          add(pokemon);
+        });
+    }).catch(function (e) {
+      console.error(e);
+    });
+    }
+
+    function loadDetails(item) {
+      var url = item.detailsUrl;
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (details) {
+        // Now we add the details to the item
+        item.imageUrl = details.sprites.front_default;
+        item.height = details.height;
+        item.types = Object.keys(details.types);
+      }).catch(function (e) {
+        console.error(e);
+      });
+    }
+
+  var apiUrl='Https://pokeapi.co/api/v2/pokemon/?limiti=150';
 
   function getAll() {
     return repository;
@@ -34,15 +65,16 @@ var pokemonRepository = (function() {
 
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    loadList: loadList,
+    loadDetails: loadDetails
    // <- this here allows us to do just that, access private data
   };
-
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon){   //The pokemonRepository points to the var=pokemonRepository at the top of code
+/*pokemonRepository.getAll().forEach(function(pokemon){   //The pokemonRepository points to the var=pokemonRepository at the top of code
   addListItem(pokemon);                                  //getAll is a function and grabs all the pokemon in the pokemonRepository and give back as an array; forEach is another function that is run on the array and  it requires us to pass in a function, the function then needs to excpt an item from the array and then do something with it.
-});
+});*/
 
 
 //Adding pokemon
@@ -58,14 +90,20 @@ function addListItem (pokemon) {              //This is the function
   });
 }
 
-
 function showDetails (pokemon) {
   console.log(pokemon);
 }
 
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon){
+    addListItem(pokemon);
+  });
+});
 
-
-
+function showDetails(item) {
+  pokemonRepository.loadDetails(item).then(function () {
+    console.log(item);   });
+};
 
 
 
